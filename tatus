@@ -1,0 +1,146 @@
+[1mdiff --git a/arrays/KadaneMaxSubarray.java b/arrays/KadaneMaxSubarray.java[m
+[1mindex 9266096..98b46d0 100644[m
+[1m--- a/arrays/KadaneMaxSubarray.java[m
+[1m+++ b/arrays/KadaneMaxSubarray.java[m
+[36m@@ -1,5 +1,21 @@[m
+ package arrays;[m
+ [m
+ public class KadaneMaxSubarray {[m
+[31m-    [m
+[31m-}[m
+[32m+[m
+[32m+[m[32m    public static void main(String[] args) {[m
+[32m+[m
+[32m+[m[32m        int[] arr = {-2,1,-3,4,-1,2,1,-5,4};[m
+[32m+[m
+[32m+[m[32m        int currentSum = arr[0];[m
+[32m+[m[32m        int maxSum = arr[0];[m
+[32m+[m
+[32m+[m[32m        for(int i = 1; i < arr.length; i++){[m
+[32m+[m
+[32m+[m[32m            currentSum = Math.max(arr[i], currentSum + arr[i]);[m
+[32m+[m
+[32m+[m[32m            maxSum = Math.max(maxSum, currentSum);[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        System.out.println("Maximum Subarray Sum = " + maxSum);[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/arrays/MergeSortedArrays.java b/arrays/MergeSortedArrays.java[m
+[1mindex a8401cf..7eb53fd 100644[m
+[1m--- a/arrays/MergeSortedArrays.java[m
+[1m+++ b/arrays/MergeSortedArrays.java[m
+[36m@@ -1,5 +1,45 @@[m
+ package arrays;[m
+ [m
+ public class MergeSortedArrays {[m
+[31m-    [m
+[31m-}[m
+[32m+[m
+[32m+[m[32m    public static void main(String[] args) {[m
+[32m+[m
+[32m+[m[32m        int[] arr1 = {1,3,5};[m
+[32m+[m[32m        int[] arr2 = {2,4,6};[m
+[32m+[m
+[32m+[m[32m        int[] result = new int[arr1.length + arr2.length];[m
+[32m+[m
+[32m+[m[32m        int i = 0;[m
+[32m+[m[32m        int j = 0;[m
+[32m+[m[32m        int k = 0;[m
+[32m+[m
+[32m+[m[32m        while(i < arr1.length && j < arr2.length){[m
+[32m+[m
+[32m+[m[32m            if(arr1[i] < arr2[j]){[m
+[32m+[m[32m                result[k] = arr1[i];[m
+[32m+[m[32m                i++;[m
+[32m+[m[32m            } else {[m
+[32m+[m[32m                result[k] = arr2[j];[m
+[32m+[m[32m                j++;[m
+[32m+[m[32m            }[m
+[32m+[m
+[32m+[m[32m            k++;[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        while(i < arr1.length){[m
+[32m+[m[32m            result[k] = arr1[i];[m
+[32m+[m[32m            i++;[m
+[32m+[m[32m            k++;[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        while(j < arr2.length){[m
+[32m+[m[32m            result[k] = arr2[j];[m
+[32m+[m[32m            j++;[m
+[32m+[m[32m            k++;[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        for(int num : result){[m
+[32m+[m[32m            System.out.print(num + " ");[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/arrays/RemoveDuplicates.java b/arrays/RemoveDuplicates.java[m
+[1mindex 7cc2502..6a2e051 100644[m
+[1m--- a/arrays/RemoveDuplicates.java[m
+[1m+++ b/arrays/RemoveDuplicates.java[m
+[36m@@ -1,5 +1,23 @@[m
+ package arrays;[m
+ [m
+ public class RemoveDuplicates {[m
+[31m-    [m
+[31m-}[m
+[32m+[m
+[32m+[m[32m    public static void main(String[] args) {[m
+[32m+[m
+[32m+[m[32m        int[] arr = {1,1,2,2,3,4,4,5};[m
+[32m+[m
+[32m+[m[32m        int index = 0;[m
+[32m+[m
+[32m+[m[32m        for(int i = 1; i < arr.length; i++){[m
+[32m+[m
+[32m+[m[32m            if(arr[i] != arr[index]){[m
+[32m+[m[32m                index++;[m
+[32m+[m[32m                arr[index] = arr[i];[m
+[32m+[m[32m            }[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        for(int i = 0; i <= index; i++){[m
+[32m+[m[32m            System.out.print(arr[i] + " ");[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/arrays/SecondLargest.java b/arrays/SecondLargest.java[m
+[1mindex 17e2ea6..2088419 100644[m
+[1m--- a/arrays/SecondLargest.java[m
+[1m+++ b/arrays/SecondLargest.java[m
+[36m@@ -1,4 +1,25 @@[m
+ package arrays;[m
+[32m+[m
+ public class SecondLargest {[m
+[31m-    [m
+[31m-}[m
+[32m+[m
+[32m+[m[32m    public static void main(String[] args) {[m
+[32m+[m
+[32m+[m[32m        int[] arr = {5,3,8,2,9};[m
+[32m+[m
+[32m+[m[32m        int largest = arr[0];[m
+[32m+[m[32m        int secondLargest = arr[0];[m
+[32m+[m
+[32m+[m[32m        for(int i = 1; i < arr.length; i++){[m
+[32m+[m
+[32m+[m[32m            if(arr[i] > largest){[m
+[32m+[m[32m                secondLargest = largest;[m
+[32m+[m[32m                largest = arr[i];[m
+[32m+[m[32m            }[m
+[32m+[m[32m            else if(arr[i] > secondLargest && arr[i] != largest){[m
+[32m+[m[32m                secondLargest = arr[i];[m
+[32m+[m[32m            }[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        System.out.println("Second Largest = " + secondLargest);[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
