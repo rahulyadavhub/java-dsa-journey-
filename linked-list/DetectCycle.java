@@ -1,4 +1,3 @@
-package linkedlist;
 
 class ListNode {
     int val;
