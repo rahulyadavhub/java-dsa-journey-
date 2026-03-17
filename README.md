@@ -142,8 +142,8 @@ public class ProblemName {
 - **Started:** March 2026
 - **Problems Solved:** 0 (growing daily)
 - **Current Topic:** Arrays & Basics
-- **Daily Goal:** 2–3 problems/day
-
+- **Daily Goal:** 1-2
+  problems/day
 ---
 
 *"Consistency over intensity. Show up every day."* 💪
